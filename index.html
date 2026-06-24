@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bill Mich — Broadcast Journalist</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2308121E'/%3E%3Crect x='12' y='5' width='8' height='14' rx='4' fill='%23E85D04'/%3E%3Cpath d='M8 17a8 8 0 0 0 16 0' stroke='%23E85D04' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cline x1='16' y1='25' x2='16' y2='29' stroke='%23E85D04' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='12' y1='29' x2='20' y2='29' stroke='%23E85D04' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;900&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
@@ -65,10 +66,10 @@
     .hero {
       min-height: 100vh;
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
+      grid-template-columns: 0.9fr 1.1fr;
       align-items: center;
-      padding: 80px 80px 60px;
-      gap: 60px;
+      padding: 80px 0 60px 80px;
+      gap: 40px;
       position: relative;
       overflow: hidden;
     }
@@ -89,7 +90,7 @@
       pointer-events: none;
     }
 
-    .hero-text { position: relative; z-index: 2; }
+    .hero-text { position: relative; z-index: 2; padding-left: 20px; }
 
     .on-air {
       display: inline-flex; align-items: center; gap: 8px;
@@ -182,11 +183,12 @@
     /* Hero photo */
     .hero-photo-wrap {
       position: relative; z-index: 2;
-      display: flex; justify-content: flex-end; align-items: flex-end;
+      display: flex; justify-content: flex-end; align-items: center;
     }
     .hero-photo-frame {
       position: relative;
-      width: 100%; max-width: 600px;
+      width: 100%; max-width: 100%;
+      max-height: 80vh; overflow: hidden;
     }
     .hero-photo-frame::before {
       content: '';
@@ -197,8 +199,8 @@
     }
     .hero-photo-frame img {
       position: relative; z-index: 1;
-      width: 100%; border-radius: 3px;
-      display: block;
+      width: 100%; height: auto; display: block;
+      border-radius: 3px;
       filter: saturate(0.9) contrast(1.05);
     }
     /* Orange accent corner */
@@ -529,14 +531,6 @@
       </div>
 
       <div class="story-card">
-        <iframe src="https://www.youtube.com/embed/XVzZ-h3zGRc" title="Ocean Beach" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class="story-card-info">
-          <div class="story-card-tag">Feature · Delaware Coast</div>
-          <div class="story-card-title">Ocean Beach — Life and Legacy Along Delmarva&#39;s Shoreline</div>
-        </div>
-      </div>
-
-      <div class="story-card">
         <iframe src="https://www.youtube.com/embed/86-TkvRUp8I" title="Burning Down Accomack" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="story-card-info">
           <div class="emmy-badge">🏆 Emmy Award Winner</div>
@@ -546,20 +540,18 @@
       </div>
 
       <div class="story-card">
-        <iframe src="https://www.youtube.com/embed/AJG4Gkoe_sU" title="Ghosts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/XVzZ-h3zGRc" title="Ocean Beach" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="story-card-info">
-          <div class="story-card-tag">Feature</div>
-          <div class="story-card-title">Ghosts — Haunted Histories of the Eastern Shore</div>
+          <div class="story-card-tag">Feature · Delaware Coast</div>
+          <div class="story-card-title">Ocean Beach — Life and Legacy Along Delmarva&#39;s Shoreline</div>
         </div>
       </div>
 
       <div class="story-card">
-        <!-- TODO: Replace YOUTUBE_ID_HERE with the actual YouTube video ID once uploaded -->
-        <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_HERE" title="Pinocchio's Journey Continues" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/AJG4Gkoe_sU" title="Ghosts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="story-card-info">
-          <div class="emmy-badge">🏆 Emmy Award Winner</div>
-          <div class="story-card-tag">Feature · Long Form</div>
-          <div class="story-card-title">Pinocchio&#39;s Journey Continues — Part Two</div>
+          <div class="story-card-tag">Feature</div>
+          <div class="story-card-title">Ghosts — Haunted Histories of the Eastern Shore</div>
         </div>
       </div>
 
